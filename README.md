@@ -4,6 +4,8 @@ This repository contains the implementation for the paper [Prediction-Guided Mul
 
 In this paper, we propose an evolutionary learning algorithm to compute a high-quality and dense Pareto solutions for multi-objective continuous robot control problems. We also design seven multi-objective continuous control benchmark problems based on [Mujoco](http://www.mujoco.org/), which are also included in this repository. This repository also contains the code for the baseline algorithms in the paper.
 
+![teaser](/Users/yunsheng/Desktop/Projects/PGMORL/images/teaser.gif)
+
 
 
 ## Installation
