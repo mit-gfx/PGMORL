@@ -19,7 +19,9 @@ In this paper, we propose an evolutionary learning algorithm to compute a high-q
 
 #### Install Dependencies
 
-You can either install the dependencies in a conda virtual env (recomended) or manually. For conda virtual env installation, simply create a virtual env named **pgmorl** by:
+You can either install the dependencies in a conda virtual env (recomended) or manually. 
+
+For conda virtual env installation, simply create a virtual env named **pgmorl** by:
 
 ```
 conda env create -f environment.yml
@@ -35,15 +37,15 @@ The training related code are in the folder `morl`. We provide the scripts in `s
 
 #### Precomputed Pareto Results
 
-While you can run the training code the compute the Pareto policies from scratch by following the training steps below, we also provide the precomputed Pareto results for each problem with you. You can download them for each problem separately in this [link](https://drive.google.com/drive/folders/15toW4SjF2b4PPvU2ZFA6kTweWfh7CqQr?usp=sharing) and directly visualize them with the visualization instructions to play with the results. After downloading the precomputed results, you can unzip it and simply create a `results` folder under the project root directory and put the downloaded file inside.
+While you can run the training code the compute the Pareto policies from scratch by following the training steps below, we also provide the precomputed Pareto results for each problem with you. You can download them for each problem separately in this [link](https://drive.google.com/drive/folders/15toW4SjF2b4PPvU2ZFA6kTweWfh7CqQr?usp=sharing) and directly visualize them with the visualization instructions to play with the results. After downloading the precomputed results, you can unzip it, create a `results` folder under the project root directory, and put the downloaded file inside.
 
 #### Benchmark Problems
 
-We design seven multi-objective continuous control benchmark problem based on Mujoco simulation, including *Walker2d-v2*, *HalfCheetah-v2*, *Hopper-v2*, *Ant-v2*, *Swimmer-v2*, *Humanoid-v2*, and *Hopper-v3*. A suffix of *-v3* indicates a three-objective problem. The reward (i.e. objective) functions in each problem are designed to have similar scales. All environments code can be found in `environments/mujoco` folder. To avoid conflicting to the original mujoco environment names, we add a `MO-` prefix to the name of each environment. For example, the environment name for *Walker2d-v2* is *MO-Walker2d-v2*.
+We design seven multi-objective continuous control benchmark problems based on Mujoco simulation, including *Walker2d-v2*, *HalfCheetah-v2*, *Hopper-v2*, *Ant-v2*, *Swimmer-v2*, *Humanoid-v2*, and *Hopper-v3*. A suffix of *-v3* indicates a three-objective problem. The reward (i.e. objective) functions in each problem are designed to have similar scales. All environments code can be found in `environments/mujoco` folder. To avoid conflicting to the original mujoco environment names, we add a `MO-` prefix to the name of each environment. For example, the environment name for *Walker2d-v2* is *MO-Walker2d-v2*.
 
 #### Train
 
-The main entrance of the training code is at  `morl/run.py`. We provide a training script in `scripts` folder for each problem for you to easily start with. You can just follow the following steps to see how to run the training for each problem by each algorithms (our algorithm and baseline algorithms).
+The main entrance of the training code is at  `morl/run.py`. We provide a training script in `scripts` folder for each problem for you to easily start with. You can just follow the following steps to see how to run the training for each problem by each algorithm (our algorithm and baseline algorithms).
 
 - Enter the project folder
 
@@ -104,7 +106,7 @@ We use the implementation of [pytorch-a2c-ppo-acktr-gail](https://github.com/iko
 If you find our paper or code is useful, please consider citing: 
 
 ```
-@inproceedings{xu2020icml,
+@inproceedings{xu2020pgmorl,
   title={Prediction-Guided Multi-Objective Reinforcement Learning for Continuous Robot Control},
   author={Xu, Jie and Tian, Yunsheng and Ma, Pingchuan and Rus, Daniela and Sueda, Shinjiro and Matusik, Wojciech},
   booktitle={International Conference on Machine Learning},
