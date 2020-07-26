@@ -35,8 +35,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Ant-v2 '\
             '--seed {} '\
             '--num-env-steps 8000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -59,8 +59,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Ant-v2 '\
             '--seed {} '\
             '--num-env-steps 8000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -81,8 +81,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Ant-v2 '\
             '--seed {} '\
             '--num-env-steps 8000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -103,8 +103,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Ant-v2 '\
             '--seed {} '\
             '--num-env-steps 8000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -125,8 +125,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Ant-v2 '\
             '--seed {} '\
             '--num-env-steps 8000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\

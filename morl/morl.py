@@ -53,7 +53,7 @@ def run(args):
     
     # Construct tasks for warm up
     elite_batch, scalarization_batch = initialize_warm_up_batch(args, device)
-    rl_num_updates = args.warm_up_iterations
+    rl_num_updates = args.warmup_iter
     for sample, scalarization in zip(elite_batch, scalarization_batch):
         sample.optgraph_id = opt_graph.insert(deepcopy(scalarization.weights), deepcopy(sample.objs), -1)
     
@@ -102,7 +102,7 @@ def run(args):
         all_sample_batch = [] 
         # store the last policy for each optimization weight for RA
         last_offspring_batch = [None] * len(processes) 
-        # only the policies with iteration % rl_update_num = 0 are inserted into offspring_batch for population update
+        # only the policies with iteration % update_iter = 0 are inserted into offspring_batch for population update
         # after warm-up stage, it's equivalent to the last_offspring_batch
         offspring_batch = [] 
         for task_id in range(len(processes)):
@@ -111,7 +111,7 @@ def run(args):
             opt_weights = deepcopy(task_batch[task_id].scalarization.weights).detach().numpy()
             for i, sample in enumerate(offsprings):
                 all_sample_batch.append(sample)
-                if (i + 1) % args.rl_update_num == 0:
+                if (i + 1) % args.update_iter == 0:
                     prev_node_id = opt_graph.insert(opt_weights, deepcopy(sample.objs), prev_node_id)
                     sample.optgraph_id = prev_node_id        
                     offspring_batch.append(sample)
@@ -157,7 +157,7 @@ def run(args):
                 raise NotImplementedError
             elite_batch = last_offspring_batch
             scalarization_batch = []
-            delta_ratio = (iteration + rl_num_updates + args.rl_update_num - args.warm_up_iterations) / (total_num_updates - args.warm_up_iterations)
+            delta_ratio = (iteration + rl_num_updates + args.update_iter - args.warmup_iter) / (total_num_updates - args.warmup_iter)
             delta_ratio = np.clip(delta_ratio, 0.0, 1.0)
             for i in np.arange(args.min_weight, args.max_weight + 0.5 * args.delta_weight, args.delta_weight):
                 w = np.clip(i + delta_ratio * args.delta_weight, args.min_weight, args.max_weight)
@@ -174,7 +174,7 @@ def run(args):
 
         iteration = min(iteration + rl_num_updates, total_num_updates)
 
-        rl_num_updates = args.rl_update_num
+        rl_num_updates = args.update_iter
 
         # ----------------------> Save Results <---------------------- #
         # save ep

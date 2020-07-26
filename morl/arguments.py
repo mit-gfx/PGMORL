@@ -36,14 +36,14 @@ def get_parser():
         type=float,
         default=0.2,
         help='granularity of weight combinations in warm-up stage')
-    parser.add_argument('--warm-up-iterations',
+    parser.add_argument('--warmup-iter',
         type=int,
         default=80,
-        help='number of iterations to run for warm up')
-    parser.add_argument('--rl-update-num',
+        help='number of RL iterations to run for warm up')
+    parser.add_argument('--update-iter',
         type=int, 
         default=20,
-        help='RL update rounds between evolutionary processes')
+        help='number of RL iterations between evolutionary processes')
     parser.add_argument('--eval-num',
         type=int,
         default=1,

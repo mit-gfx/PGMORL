@@ -164,8 +164,8 @@ def MOPG_worker(args, task_id, task, device, iteration, num_updates, start_time,
                             int(total_num_steps / (end - start_time)),
                             end - start_time))
 
-        # put results back every rl_update_num iterations, to avoid the multi-processing crash
-        if (j + 1) % args.rl_update_num == 0 or j == final_iter - 1:
+        # put results back every update_iter iterations, to avoid the multi-processing crash
+        if (j + 1) % args.update_iter == 0 or j == final_iter - 1:
             offspring_batch = np.array(offspring_batch)
             results = {}
             results['task_id'] = task_id

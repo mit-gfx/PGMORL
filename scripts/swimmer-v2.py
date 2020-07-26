@@ -35,8 +35,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Swimmer-v2 '\
             '--seed {} '\
             '--num-env-steps 2000000 '\
-            '--warm-up-iterations 40 '\
-            '--rl-update-num 10 '\
+            '--warmup-iter 40 '\
+            '--update-iter 10 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -59,8 +59,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Swimmer-v2 '\
             '--seed {} '\
             '--num-env-steps 2000000 '\
-            '--warm-up-iterations 40 '\
-            '--rl-update-num 10 '\
+            '--warmup-iter 40 '\
+            '--update-iter 10 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -81,8 +81,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Swimmer-v2 '\
             '--seed {} '\
             '--num-env-steps 2000000 '\
-            '--warm-up-iterations 40 '\
-            '--rl-update-num 10 '\
+            '--warmup-iter 40 '\
+            '--update-iter 10 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -103,8 +103,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Swimmer-v2 '\
             '--seed {} '\
             '--num-env-steps 2000000 '\
-            '--warm-up-iterations 40 '\
-            '--rl-update-num 10 '\
+            '--warmup-iter 40 '\
+            '--update-iter 10 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\
@@ -125,8 +125,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Swimmer-v2 '\
             '--seed {} '\
             '--num-env-steps 2000000 '\
-            '--warm-up-iterations 40 '\
-            '--rl-update-num 10 '\
+            '--warmup-iter 40 '\
+            '--update-iter 10 '\
             '--min-weight 0.0 '\
             '--max-weight 1.0 '\
             '--delta-weight 0.2 '\

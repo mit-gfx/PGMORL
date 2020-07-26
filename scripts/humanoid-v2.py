@@ -35,8 +35,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Humanoid-v2 '\
             '--seed {} '\
             '--num-env-steps 20000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--num-processes 8 '\
             '--gamma 0.99 '\
             '--min-weight 0.0 '\
@@ -61,8 +61,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Humanoid-v2 '\
             '--seed {} '\
             '--num-env-steps 20000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--num-processes 8 '\
             '--gamma 0.99 '\
             '--min-weight 0.0 '\
@@ -85,8 +85,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Humanoid-v2 '\
             '--seed {} '\
             '--num-env-steps 20000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--num-processes 8 '\
             '--gamma 0.99 '\
             '--min-weight 0.0 '\
@@ -109,8 +109,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Humanoid-v2 '\
             '--seed {} '\
             '--num-env-steps 20000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--num-processes 8 '\
             '--gamma 0.99 '\
             '--min-weight 0.0 '\
@@ -133,8 +133,8 @@ for i in range(args.num_seeds):
             '--env-name MO-Humanoid-v2 '\
             '--seed {} '\
             '--num-env-steps 20000000 '\
-            '--warm-up-iterations 200 '\
-            '--rl-update-num 40 '\
+            '--warmup-iter 200 '\
+            '--update-iter 40 '\
             '--num-processes 8 '\
             '--gamma 0.99 '\
             '--min-weight 0.0 '\
