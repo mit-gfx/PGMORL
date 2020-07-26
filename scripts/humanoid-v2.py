@@ -155,7 +155,8 @@ for i in range(args.num_seeds):
 def worker(input, output):
     for cmd in iter(input.get, 'STOP'):
         ret_code = os.system(cmd)
-        if ret_code == signal.SIGINT:
+        if ret_code != 0:
+            output.put('killed')
             break
     output.put('done')
 
@@ -167,15 +168,14 @@ done_queue = Queue()
 for cmd in commands:
     task_queue.put(cmd)
 
+# Submit stop signals
+for i in range(args.num_processes):
+    task_queue.put('STOP')
+
 # Start worker processes
 for i in range(args.num_processes):
     Process(target=worker, args=(task_queue, done_queue)).start()
 
 # Get and print results
-print('Unordered results:')
 for i in range(args.num_processes):
-    print('\t', done_queue.get())
-
-# Tell child processes to stop
-for i in range(args.num_processes):
-    task_queue.put('STOP')
+    print(f'Process {i}', done_queue.get())
