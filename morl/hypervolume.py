@@ -18,6 +18,9 @@
 __author__ = "Simon Wessing"
 
 
+from copy import deepcopy
+
+
 class InnerHyperVolume:
     """
     Hypervolume computation based on variant 3 of the algorithm in the paper:
@@ -42,6 +45,7 @@ class InnerHyperVolume:
         that the reference point is [0, ..., 0].
 
         """
+        front = deepcopy(front)
 
         def weaklyDominates(point, other):
             for i in range(len(point)):
