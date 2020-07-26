@@ -77,27 +77,11 @@ def generate_weights_batch_dfs(i, obj_num, min_weight, max_weight, delta_weight,
         weight = weight[0:i]
         w += delta_weight
 
-def compute_hypervolume_2d(ep_objs_batch):
-        ref_x, ref_y = 0.0, 0.0
-        x, hv = ref_x, 0.0
-        for objs in ep_objs_batch:
-            hv += (max(ref_x, objs[0]) - x) * (max(ref_y, objs[1]) - ref_y)
-            x = max(ref_x, objs[0])
-        return hv
-
-def compute_hypervolume_3d(ep_objs_batch):
-    HV = InnerHyperVolume(np.zeros(3))
-    return HV.compute(ep_objs_batch)
-
 # compute the hypervolume of a given pareto front
-# the input ep_objs_batch should be sorted with increasing first objective
 def compute_hypervolume(ep_objs_batch):
     n = len(ep_objs_batch[0])
-    if n == 2:
-        hv = compute_hypervolume_2d(ep_objs_batch)
-    else:
-        hv = compute_hypervolume_3d(ep_objs_batch)
-    return hv
+    HV = InnerHyperVolume(np.zeros(n))
+    return HV.compute(ep_objs_batch)
 
 # compute the sparsity of a given pareto front
 def compute_sparsity(ep_objs_batch):
