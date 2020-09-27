@@ -106,10 +106,10 @@ We use the implementation of [pytorch-a2c-ppo-acktr-gail](https://github.com/iko
 If you find our paper or code is useful, please consider citing: 
 
 ```
-@inproceedings{xu2020pgmorl,
+@inproceedings{xu2020prediction,
   title={Prediction-Guided Multi-Objective Reinforcement Learning for Continuous Robot Control},
   author={Xu, Jie and Tian, Yunsheng and Ma, Pingchuan and Rus, Daniela and Sueda, Shinjiro and Matusik, Wojciech},
-  booktitle={International Conference on Machine Learning},
+  booktitle={Proceedings of the 37th International Conference on Machine Learning},
   year={2020}
 }
 ```
