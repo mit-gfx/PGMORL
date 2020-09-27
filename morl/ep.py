@@ -16,9 +16,9 @@ class EP:
     def index(self, indices, inplace=True):
         if inplace:
             self.obj_batch, self.sample_batch = \
-                map(lambda batch: batch[np.array(indices)], [self.obj_batch, self.sample_batch])
+                map(lambda batch: batch[np.array(indices, dtype=int)], [self.obj_batch, self.sample_batch])
         else:
-            return map(lambda batch: deepcopy(batch[np.array(indices)]), [self.obj_batch, self.sample_batch])
+            return map(lambda batch: deepcopy(batch[np.array(indices, dtype=int)]), [self.obj_batch, self.sample_batch])
 
     def update(self, sample_batch):
         self.sample_batch = np.append(self.sample_batch, np.array(deepcopy(sample_batch)))
