@@ -37,7 +37,7 @@ The training related code are in the folder `morl`. We provide the scripts in `s
 
 #### Precomputed Pareto Results
 
-While you can run the training code the compute the Pareto policies from scratch by following the training steps below, we also provide the precomputed Pareto results for each problem with you. You can download them for each problem separately in this [link](https://drive.google.com/drive/folders/15toW4SjF2b4PPvU2ZFA6kTweWfh7CqQr?usp=sharing) and directly visualize them with the visualization instructions to play with the results. After downloading the precomputed results, you can unzip it, create a `results` folder under the project root directory, and put the downloaded file inside.
+While you can run the training code the compute the Pareto policies from scratch by following the training steps below, we also provide the precomputed Pareto results for each problem. You can download them for each problem separately in [this google drive link](https://drive.google.com/drive/folders/15toW4SjF2b4PPvU2ZFA6kTweWfh7CqQr?usp=sharing) and directly visualize them with the visualization instructions to play with the results. After downloading the precomputed results, you can unzip it, create a `results` folder under the project root directory, and put the downloaded file inside.
 
 #### Benchmark Problems
 
