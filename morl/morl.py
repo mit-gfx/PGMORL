@@ -113,7 +113,7 @@ def run(args):
                 all_sample_batch.append(sample)
                 if (i + 1) % args.update_iter == 0:
                     prev_node_id = opt_graph.insert(opt_weights, deepcopy(sample.objs), prev_node_id)
-                    sample.optgraph_id = prev_node_id        
+                    sample.optgraph_id = prev_node_id
                     offspring_batch.append(sample)
             last_offspring_batch[task_id] = offsprings[-1]
 

@@ -14,7 +14,7 @@ parser.add_argument('--num-seeds', type=int, default=6)
 parser.add_argument('--num-processes', 
                     type=int, 
                     default=1, 
-                    help='number of algorithms to be run in parallel (Note: each algorithm needs 4 processors by default, so the total number of processors is 4 * num-processes.)')
+                    help='number of algorithms to be run in parallel (Note: each algorithm needs 4 * num-tasks processors by default, so the total number of processors is 4 * num-tasks * num-processes.)')
 parser.add_argument('--save-dir', type=str, default='./results/Humanoid-v2')
 args = parser.parse_args()
 

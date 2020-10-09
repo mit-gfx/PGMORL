@@ -169,11 +169,11 @@ class Population:
     def update(self, sample_batch):
         ### population = Union(population, offspring) ###
         all_sample_batch = self.sample_batch + sample_batch
-
+        
         self.sample_batch = []
         self.pbuffers = [[] for _ in range(self.pbuffer_num)]       # store the sample indices in each pbuffer
         self.pbuffer_dist = [[] for _ in range(self.pbuffer_num)]   # store the sample distance in each pbuffer
-        
+
         ### select the population by performance buffer ###       
         for i, sample in enumerate(all_sample_batch):
             self.insert_pbuffer(i, sample.objs)
