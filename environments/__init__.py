@@ -41,4 +41,3 @@ register(
     entry_point = 'environments.humanoid:HumanoidEnv',
     max_episode_steps=1000,
 )
-
